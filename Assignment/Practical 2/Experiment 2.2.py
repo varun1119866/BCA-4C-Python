@@ -1,5 +1,5 @@
 #WAP to demonstrate built in functions of Strings
-str = "Radhika Adlakha"
+str = "Ajay Godara"
 print(str)
 print(str.upper())
 print(str.lower())
