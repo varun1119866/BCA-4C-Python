@@ -1,6 +1,6 @@
 #WAP to demonstrate Slicing Operations in Strings
 
-str = "Radhika Adlakha"
+str = "Ajay Godara"
 print(str[0:8])
 print(str[8:13])
 print(str[0:13])
