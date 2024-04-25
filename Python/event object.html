@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,">
+        <title>Event handling</title>
+    </head>
+    <body style="background-color: grey;">
+        <h1> EVENT HANDLING</h1>
+        <!--1adding event directly:-->
+        <button id="btn">Click me</button>
+
+        <!--adding event:-->
+        <script>
+            document.getElementById('btn').onclick=function()
+            {
+                alert("button is pressed:")
+            }
+            <!--3.adding event:--> 
+            <script>
+                document.getElementById('btn').addEventListener('click',function()
+                {
+                    alert("this is EVENT")
+                })
+
+                <!--adding object:-->
+                <script>
+                    document.getElementById('btn').addEventListener('click',function(e{
+                        console.log(e)
+                    })
+
+            </script>
+        
+    </body>
+</html>
+//
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width,">
+        <title>Event handling</title>
+    </head>
+    <body style="background-color: grey;">
+        <u1 id="image">
+            <li><img src="img.jpg"width="200px"/></li>
+            <li><img src="nature.jpg"width="200px"/></li>
+            </u1>
+        <script>
+            document.getElementById("image").addEventlistener('click',function(e)
+            {
+                console.log("clicked")
+            },true)
+        </script>
