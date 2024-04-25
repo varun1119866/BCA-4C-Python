@@ -1,0 +1,87 @@
+Practical 3 – Conditionals in Python – Decision Control
+
+
+# 3.1 WAP to check if one No. is divisible by the other or not
+
+def is_divisible(num1, num2):
+    if num1 % num2 == 0:
+        return True
+    else:
+        return False
+num1 = 10
+num2 = 2
+if is_divisible(num1, num2):
+    print(f"{num1} is divisible by {num2}.")
+else:
+    print(f"{num1} is not divisible by {num2}.")
+
+
+
+# 3.2 WAP to check if a Number is +ve, -ve or zero
+
+def check_number(num):
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    else:
+        return "Zero"
+num = 10
+print(f"The number {num} is {check_number(num)}.")
+
+
+# 3.3 WAP to check if a given year is Leap or not
+
+def is_leap_year(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+year = 2020
+if is_leap_year(year):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
+
+
+# 3.4 WAP to accept basic salary for the employee. Calculate DA as
+30% of bs, HRA as 20% of bs if bs&gt;=20000else compute DA as
+20% and HRA as 10%. Display the result.
+
+def calculate_da_hra(bs):
+    if bs >= 20000:
+        da = bs * 0.30
+        hra = bs * 0.20
+    else:
+        da = bs * 0.20
+        hra = bs * 0.10
+
+    return da, hra
+bs = 25000
+da, hra = calculate_da_hra(bs)
+print(f"For a basic salary of {bs}, DA is {da} and HRA is {hra}.")
+
+
+
+# 3.5 WAP to accept sales amount for the salesman. Compute commission as 20% of sales amount if sales amount&gt;=15000,
+comm as 15% if sales amount &gt;=1000 else comm as 10 %.
+Display the result.
+
+def calculate_commission(sales_amount):
+    if sales_amount >= 15000:
+        commission = sales_amount * 0.20
+    elif sales_amount >= 10000:
+        commission = sales_amount * 0.15
+    else:
+        commission = sales_amount * 0.10
+
+    return commission
+sales_amount = 20000
+commission = calculate_commission(sales_amount)
+print(f"For a sales amount of {sales_amount}, the commission is {commission}.")
