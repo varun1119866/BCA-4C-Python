@@ -1,0 +1,28 @@
+Practical 2 – Working with Strings – basic String Operations
+
+
+# 2.1 WAP to demonstrate Slicing Operations in Strings
+
+s = "Hello, World!"
+print(f"Original string: {s}")
+print(f"Slicing from 3rd to 12th character: {s[2:12]}")
+print(f"Slicing from 3rd to 2nd last character: {s[2:-2]}")
+print(f"Slicing from start to end with step 2: {s[::2]}")
+print(f"Slicing from end to start with step -1 (reversing the string): {s[::-1]}")
+
+
+# 2.2 WAP to demonstrate built in functions of Strings
+
+s = "Hello, World!"
+print(f"Original string: {s}")
+print(f"Capitalize: {s.capitalize()}")
+print(f"Upper: {s.upper()}")
+print(f"Lower: {s.lower()}")
+print(f"Count of 'l': {s.count('l')}")
+print(f"Find 'World': {s.find('World')}")
+print(f"Replace 'World' with 'Python': {s.replace('World', 'Python')}")
+print(f"Split: {s.split()}")
+print(f"Strip: {'   Hello, World!   '.strip()}")
+print(f"Is '123' a digit: {'123'.isdigit()}")
+print(f"Is 'abc' an alphabet: {'abc'.isalpha()}")
+print(f"Is 'abc123' an alphanumeric: {'abc123'.isalnum()}")

@@ -1,0 +1,122 @@
+Practical 5 Working with Lists in Python
+
+# 5.1 WAP to show the creation and working of lists
+
+my_list = [1, 2, 3, 4, 5]
+print(f"Created list: {my_list}")
+print(f"First element: {my_list[0]}")
+print(f"Last element: {my_list[-1]}")
+my_list[0] = 10
+print(f"Modified list: {my_list}")
+my_list.append(6)
+print(f"List after adding an element: {my_list}")
+my_list.remove(6)
+print(f"List after removing an element: {my_list}")
+print(f"Length of the list: {len(my_list)}")
+my_list.sort()
+print(f"Sorted list: {my_list}")
+my_list.reverse()
+print(f"Reversed list: {my_list}")
+
+
+# 5.2 WAP to print elements of a list[‘q’,’w’,’e’,’r’,’t’,’y’] in separate
+lines along with element’s both indexes (Positive and Negative).
+
+my_list = ['q', 'w', 'e', 'r', 't', 'y']
+for element in my_list:
+    print(element)
+
+
+# 5.3 WAP to demonstrate the working of methods used with lists
+
+my_list = [1, 2, 3, 4, 5]
+print(f"Created list: {my_list}")
+my_list.append(6)
+print(f"List after append: {my_list}")
+my_list.insert(0, 0)
+print(f"List after insert: {my_list}")
+my_list.extend([7, 8, 9])
+print(f"List after extend: {my_list}")
+my_list.remove(0)
+print(f"List after remove: {my_list}")
+my_list.pop(0)
+print(f"List after pop: {my_list}")
+my_list.clear()
+print(f"List after clear: {my_list}")
+my_list = [1, 2, 3, 2, 4, 2, 5]
+print(f"Index of 2: {my_list.index(2)}")
+print(f"Count of 2: {my_list.count(2)}")
+my_list.sort()
+print(f"List after sort: {my_list}")
+my_list.reverse()
+print(f"List after reverse: {my_list}")
+new_list = my_list.copy()
+print(f"Copied list: {new_list}")
+
+
+# 5.4 WAP to create a 3*3 Matrix and how to extract individual elements of the matrix
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(f"Created 3x3 matrix: {matrix}")
+for i in range(3):
+    for j in range(3):
+        print(f"Element at position ({i}, {j}): {matrix[i][j]}")
+
+# 5.5 WAP to demonstrate built-in functions in Lists
+
+my_list = [3, 1, 7, 5, 2]
+
+print("Length of the list:", len(my_list))
+print("Maximum value in the list:", max(my_list))
+print("Minimum value in the list:", min(my_list))
+print("Sum of all elements in the list:", sum(my_list))
+
+sorted_list = sorted(my_list)
+print("Sorted list:", sorted_list)
+
+my_list.append(10)
+print("List after appending 10:", my_list)
+
+popped_element = my_list.pop()
+print("Popped element:", popped_element)
+print("List after popping the last element:", my_list)
+
+index_of_5 = my_list.index(5)
+print("Index of value 5:", index_of_5)
+
+count_of_5 = my_list.count(5)
+print("Number of occurrences of value 5:", count_of_5)
+
+my_list.remove(5)
+print("List after removing first occurrence of 5:", my_list)
+
+my_list.clear()
+print("List after clearing all elements:", my_list)
+
+
+# 5.6 WAP to calculate the mean, variance and std. deviation of given list of
+numbers
+
+import math
+
+def calculate_mean(numbers):
+    return sum(numbers) / len(numbers)
+
+def calculate_variance(numbers):
+    mean = calculate_mean(numbers)
+    return sum((x - mean) ** 2 for x in numbers) / len(numbers)
+
+def calculate_std_deviation(numbers):
+    variance = calculate_variance(numbers)
+    return math.sqrt(variance)
+
+# Sample list of numbers
+numbers = [2, 4, 6, 8, 10]
+
+mean = calculate_mean(numbers)
+variance = calculate_variance(numbers)
+std_deviation = calculate_std_deviation(numbers)
+
+print("Mean:", mean)
+print("Variance:", variance)
+print("Standard Deviation:", std_deviation)

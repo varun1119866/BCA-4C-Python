@@ -1,0 +1,163 @@
+Practical 4 – While and For loops – Repetition Control Statements
+
+# 4.1 WAP to show working of a while Loop with a text
+
+s = "Hello, World!"
+i = 0
+while i < len(s):
+    print(s[i])
+    i += 1
+
+
+# 4.2 WAP to show working of a while Loop with a Numbers
+
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+
+# 4.3 WAP to show the working of break and continue statement
+
+print("Working of break statement:")
+for i in range(1, 11):
+    if i == 5:
+        break
+    print(i)
+print("\nWorking of continue statement:")
+for i in range(1, 11):
+    if i == 5:
+        continue
+    print(i)
+
+
+# 4.4 WAP to the use of else statement with while and break
+
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+    if i == 3:
+        print("Breaking the loop")
+        break
+else:
+    print("End of loop")
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+else:
+    print("End of loop")
+
+
+# 4.5 WAP to compute the Sum of the Series 4 + 8 + 12 + … + 40
+
+start = 4
+end = 40
+step = 4
+n = (end - start) // step + 1
+sum_of_series = n / 2 * (start + end)
+print(f"The sum of the series 4 + 8 + 12 + ... + 40 is {sum_of_series}.")
+
+
+# 4.6 Write a program to display the Fibonacci sequences up to nth term where n is provided by the user.
+
+def fibonacci(n):
+    a, b = 0, 1
+
+    # Print the Fibonacci sequences up to nth term
+    for i in range(n):
+        print(a, end=" ")
+        a, b = b, a + b
+n = 10
+print(f"The Fibonacci sequences up to {n}th term are:")
+fibonacci(n)
+
+
+# 4.7 WAP that prints multiplication table of a number using for loop.
+
+def print_multiplication_table(num):
+    for i in range(1, 11):
+        print(f"{num} * {i} = {num * i}")
+num = 5
+print(f"The multiplication table of {num} is:")
+print_multiplication_table(num)
+
+
+# 4.8 WAP To print a Triangle Pattern
+
+rows = 5
+
+for i in range(rows):
+    # Print leading spaces
+    for j in range(rows - i - 1):
+        print(" ", end="")
+    # Print stars
+    for j in range(2 * i + 1):
+        print("*", end="")
+    # Move to the next line
+    print()
+
+
+# 4.9 WAP to compute Sum of the series 3 + 6 + 9 + … + 30
+
+start = 3
+end = 30
+step = 3
+n = (end - start) // step + 1
+sum_of_series = n / 2 * (start + end)
+print(f"The sum of the series 3 + 6 + 9 + ... + 30 is {sum_of_series}.")
+
+
+# 4.10 WAP to print the product of the series m = 15 * 13 * 11 * 9 * 7
+
+start = 15
+end = 7
+step = -2
+product = 1
+for i in range(start, end - 1, step):
+    product *= i
+print(f"The product of the series 15 * 13 * 11 * 9 * 7 is {product}.")
+
+
+# 4.11 WAP to compute factorial of a Number
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+n = 5
+print(f"The factorial of {n} is {factorial(n)}.")
+
+
+# 4.12 WAP to display the Cube of first 10 even numbers
+
+for i in range(2, 21, 2):
+    cube = i ** 3
+    print(f"The cube of {i} is {cube}.")
+
+
+# 4.13 WAP to compute sum of first n natural numbers
+
+def sum_of_natural_numbers(n):
+    return n * (n + 1) // 2
+n = 10
+print(f"The sum of the first {n} natural numbers is {sum_of_natural_numbers(n)}")
+
+
+# 4.14 WAP to display 1 to 10 numbers in reverse order
+
+for i in range(10, 0, -1):
+    print(i)
+
+
+# 4.15 WAP to create a list of any specific size. Arrange all the
+  elements in ascending order. Display list before and after sorting
+
+import random
+size = 10
+lst = [random.randint(1, 100) for _ in range(size)]
+print(f"List before sorting: {lst}")
+lst.sort()
+print(f"List after sorting: {lst}")
