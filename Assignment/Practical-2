@@ -1,0 +1,47 @@
+Practical 2 – Working with Strings – basic String Operations
+
+#2.1 WAP to demonstrate Slicing Operations in Strings
+# Example string
+original_string = "Hello, World!"
+
+# Slicing from index 0 to 5 (exclusive)
+substring1 = original_string[0:5]
+print(f"Substring 1: {substring1}")
+
+# Slicing from index 7 to the end
+substring2 = original_string[7:]
+print(f"Substring 2: {substring2}")
+
+# Slicing with a step of 2
+substring3 = original_string[::2]
+print(f"Substring 3: {substring3}")
+
+
+#2.2 WAP to demonstrate built in functions of Strings
+# Example string
+original_string = "Hello, World!"
+
+# 1. Changing the case of the string
+print("Converted String:")
+print(original_string.upper())  # Converts to uppercase
+print(original_string.lower())  # Converts to lowercase
+print(original_string.title())  # Converts to title case
+print(original_string.swapcase())  # Swaps cases
+print(original_string.capitalize())  # Capitalizes the first character
+
+# 2. Finding the length of the string
+greeting_length = len(original_string)
+print(f"Length of the string: {greeting_length}")
+
+# 3. Checking if the string contains only alphanumeric characters
+is_alphanumeric = original_string.isalnum()
+print(f"Is the string alphanumeric? {is_alphanumeric}")
+
+# 4. Replacing a substring
+new_string = original_string.replace("Hello", "Hi")
+print(f"Modified string: {new_string}")
+
+# 5. Checking if the string starts with a specific value
+starts_with_hello = original_string.startswith("Hello")
+print(f"Does the string start with 'Hello'? {starts_with_hello}")
+

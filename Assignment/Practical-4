@@ -1,0 +1,193 @@
+Practical 4 – While and For loops – Repetition Control Statements
+
+# 4.1 WAP to show working of a while Loop with a text
+count = 0
+while count < 3:
+    print("Hello Geek")
+    count += 1
+
+
+
+#4.2 WAP to show working of a while Loop with a Numbers
+i = 1
+while i <= 10:
+    print(i)
+    i += 1
+
+
+
+#4.3 WAP to show the working of break and continue statement
+def main():
+    # Using a loop to iterate over a range of numbers
+    for i in range(1, 11):
+        if i == 5:
+            print("Encountered 5, breaking out of the loop")
+            break  # Exit the loop when i equals 5
+        elif i % 2 == 0:
+            print(f"Even number: {i}")
+        else:
+            print(f"Odd number: {i}")
+    print("\nContinuing with the next loop:")
+    for j in range(1, 11):
+        if j % 3 == 0:
+            print(f"Skipping {j} (multiple of 3)")
+            continue  # Skip this iteration and move to the next one
+     print(f"Number: {j}")
+    if __name__ == "__main__":
+    main()
+
+
+# 4.4 WAP to the use of else statement with while and break
+def main():
+    counter = 0
+    while counter < 2:
+        print("This is inside the loop")
+        counter += 1
+    else:
+        print("This is inside the else block")
+if __name__ == "__main__":
+    main()
+
+
+# 4.5 WAP to compute the Sum of the Series 4 + 8 + 12 + … + 40
+start = 4
+end = 40
+step = 4
+n = (end - start) // step + 1
+sum_of_series = n / 2 * (start + end)
+print(f"The sum of the series 4 + 8 + 12 + ... + 40 is {sum_of_series}.")
+
+
+
+# 4.6 Write a program to display the Fibonacci sequences up to nth term where n is provided by the user.
+nterms = int(input("How many terms? "))  # Get the number of terms from the user
+n1, n2 = 0, 1
+count = 0
+if nterms <= 0:
+    print("Please enter a positive integer")
+elif nterms == 1:
+    print("Fibonacci sequence up to", nterms, ":")
+    print(n1)
+else:
+    print("Fibonacci sequence:")
+    while count < nterms:
+        print(n1)
+        nth = n1 + n2  # Calculate the next term
+        n1 = n2
+        n2 = nth
+        count += 1
+
+
+# 4.7 WAP that prints multiplication table of a umber using for loop.
+def print_multiplication_table(num):
+    for i in range(1, 11):
+        print(f"{num} * {i} = {num * i}")
+num = 5
+print(f"The multiplication table of {num} is:")
+print_multiplication_table(num)
+
+
+# 4.8 WAP To print a Triangle Pattern
+def print_triangle(rows):
+    for i in range(1, rows + 1):
+        print(" " * (rows - i) + "*" * (2 * i - 1))
+rows = 5 
+print_triangle(rows)
+
+
+
+#4.9 WAP to compute Sum of the series 3 + 6 + 9 + … + 30
+def compute_series_sum():
+    start = 3
+    end = 30
+    step = 3
+    total_sum = 0
+    for num in range(start, end + 1, step):
+        total_sum += num
+    return total_sum
+series_sum = compute_series_sum()
+print("Sum of the series 3 + 6 + 9 + ... + 30 is:", series_sum)
+
+
+
+# 4.10 WAP to print the product of the series m = 15 * 13 * 11 * 9 * 7
+def compute_product():
+    m = 15 * 13 * 11 * 9 * 7
+    return m
+product = compute_product()
+print("Product of the series m = 15 * 13 * 11 * 9 * 7 is:", product)
+
+
+
+# 4.11 WAP to compute factorial of a Number
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+# Input number whose factorial you want to compute
+num = int(input("Enter a number to compute its factorial: "))
+
+# Check if the input number is non-negative
+if num < 0:
+    print("Factorial is not defined for negative numbers.")
+elif num == 0:
+    print("Factorial of 0 is 1.")
+else:
+    result = factorial(num)
+    print(f"Factorial of {num} is {result}.")
+
+
+
+# 4.12 WAP to display the Cube of first 10 even numbers
+def cube_of_even_numbers():
+    even_numbers = [2 * i for i in range(1, 11)]  # Generate the first 10 even numbers
+    cubes = [num ** 3 for num in even_numbers]  # Calculate the cube of each even number
+    return cubes
+cubes_of_even = cube_of_even_numbers()
+for index, cube in enumerate(cubes_of_even, start=1):
+    print(f"Cube of {2 * index} is {cube}")
+
+
+
+ # 4.13 WAP to compute sum of first n natural numbers
+def sum_of_natural_numbers(n):
+    if n <= 0:
+        return "Please enter a positive integer."
+    else:
+        return n * (n + 1) // 2
+# Input the value of n
+n = int(input("Enter the value of n: "))
+result = sum_of_natural_numbers(n)
+print(f"Sum of the first {n} natural numbers is:", result)
+
+
+
+# 4.14 WAP to display 1 to 10 numbers in reverse order
+def display_numbers_reverse():
+    for num in range(10, 0, -1):
+        print(num)
+display_numbers_reverse()
+
+
+
+# 4.15 WAP to create a list of any specific size. Arrange all the elements in ascending order. Display list before and after sorting
+def create_and_sort_list(size):
+    # Create a list with random elements
+    import random
+    my_list = [random.randint(1, 100) for _ in range(size)]
+
+    # Display the list before sorting
+    print("List before sorting:", my_list)
+
+    # Sort the list in ascending order
+    my_list.sort()
+
+    # Display the sorted list
+    print("List after sorting in ascending order:", my_list)
+
+# Specify the size of the list
+size_of_list = 7  # You can change this value as needed
+
+# Call the function to create and sort the list
+create_and_sort_list(size_of_list)

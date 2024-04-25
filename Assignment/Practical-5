@@ -1,0 +1,155 @@
+Practical 5 Working with Lists in Python
+
+ 5.1 WAP to show the creation and working of lists
+numbers = [1, 2, 3, 4, 5]
+print("Initial list:", numbers)
+
+numbers.append(6)
+print("After appending 6:", numbers)
+
+numbers.insert(2, 7)
+print("After inserting 7 at index 2:", numbers)
+
+numbers.remove(3)
+print("After removing 3:", numbers)
+
+index = numbers.index(4)
+print("Index of 4:", index)
+
+exists = 5 in numbers
+print("Does 5 exist in the list?", exists)
+
+numbers.sort()
+print("Sorted list:", numbers)
+
+numbers.reverse()
+print("Reversed list:", numbers)
+
+first_element = numbers[0]
+last_element = numbers[-1]
+print("First element:", first_element)
+print("Last element:", last_element)
+
+sliced_list = numbers[2:5]
+print("Sliced list:", sliced_list)
+
+numbers.clear()
+print("List after clearing:", numbers)
+
+
+
+
+# 5.2 WAP to print elements of a list[‘q’,’w’,’e’,’r’,’t’,’y’] in 3separate lines along with element’s both indexes (Positive and Negative).
+my_list = ['q', 'w', 'e', 'r', 't', 'y']
+for index, element in enumerate(my_list):
+    print(f"Element: {element}, Positive Index: {index}, Negative Index: {-len(my_list) + index}")
+
+
+
+# 5.3 WAP to demonstrate the working of methods used with lists
+# Create a list
+my_list = ['apple', 'banana', 'cherry']
+
+my_list.append('date')
+print("After append:", my_list)
+
+my_list.insert(2, 'grape')
+print("After insert:", my_list)
+
+my_list.remove('banana')
+print("After remove:", my_list)
+
+popped_element = my_list.pop(1)
+print("Popped element:", popped_element)
+print("After pop:", my_list)
+
+my_list.extend(['kiwi', 'lemon'])
+print("After extend:", my_list)
+
+count_apple = my_list.count('apple')
+print("Count of 'apple':", count_apple)
+
+my_list.reverse()
+print("After reverse:", my_list)
+
+my_list.sort()
+print("After sort (ascending order):", my_list)
+
+my_list.clear()
+print("After clear:", my_list)
+
+
+
+
+
+# 5.4 WAP to create a 3*3 Matrix and how to extract individual elements of the matrix
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Print the entire matrix
+print("Matrix:")
+for row in matrix:
+    print(row)
+
+element_00 = matrix[0][0]
+element_01 = matrix[0][1]
+element_10 = matrix[1][0]
+element_22 = matrix[2][2]
+
+print("\nExtracted Elements:")
+print("Element at (0, 0):", element_00)
+print("Element at (0, 1):", element_01)
+print("Element at (1, 0):", element_10)
+print("Element at (2, 2):", element_22)
+
+
+
+
+# 5.5 WAP to demonstrate built-in functions in Lists
+my_list = [3, 1, 4, 1, 5, 9, 2, 6, 5]
+# Demonstrate built-in functions
+
+print("Length of the list:", len(my_list))
+
+print("Sum of elements in the list:", sum(my_list))
+
+print("Minimum element in the list:", min(my_list))
+print("Maximum element in the list:", max(my_list))
+
+count_1 = my_list.count(1)
+print("Count of '1' in the list:", count_1)
+
+index_5 = my_list.index(5)
+print("Index of '5' in the list:", index_5)
+
+my_list.sort()
+print("Sorted list (ascending order):", my_list)
+
+my_list.reverse()
+print("Reversed list:", my_list)
+
+my_list.clear()
+print("List after clearing:", my_list)
+
+
+
+
+
+# 5.6 WAP to calculate the mean, variance and std. deviation of given list of numbers
+import statistics
+numbers = [10, 15, 20, 25, 30]
+
+# Calculate mean
+mean = statistics.mean(numbers)
+print("Mean:", mean)
+
+# Calculate variance
+variance = statistics.variance(numbers)
+print("Variance:", variance)
+
+# Calculate standard deviation
+std_deviation = statistics.stdev(numbers)
+print("Standard Deviation:", std_deviation)
