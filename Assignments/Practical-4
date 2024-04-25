@@ -1,0 +1,113 @@
+Practical 4 – While and For loops – Repetition Control Statements
+4.1 WAP to show working of a while Loop with a text
+counter = 0
+while counter < 5:
+    print("Hello, World!")
+    counter += 1
+
+4.2 WAP to show working of a while Loop with a Numbers	
+counter = 1
+while counter <= 10:
+    print(counter)
+ 
+counter += 1
+4.3 WAP to show the working of break and continue statement
+counter = 1
+while counter <= 10:
+    if counter == 5:
+        break
+    if counter % 2 == 0:
+        continue
+    print(counter)
+    counter += 1
+4.4 WAP to the use of else statement with while and break
+counter = 1
+while counter <= 10:
+    if counter == 5:
+        break
+    print(counter)
+    counter += 1
+else:
+    print("The loop has completed successfully")
+
+4.5 WAP to compute the Sum of the Series 4 + 8 + 12 + … + 40
+sum = 0
+num = 4
+while num <= 40:
+    sum += num
+    num += 4
+print(sum)
+
+4.6 Write a program to display the Fibonacci sequences up to
+nth term where n is provided by the user.
+n = int(input("Enter the value of n: "))
+a, b = 0, 1
+while a < n:
+    print(a)
+    a, b = b, a + b
+
+4.7 WAP that prints multiplication table of a umber using for loop.
+num = int(input("Enter a number: "))
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+
+4.8 WAP To print a Triangle Pattern
+n = int(input("Enter the number of rows: "))
+for i in range(1, n + 1):
+    print("*" * i)
+
+4.9 WAP to compute Sum of the series 3 + 6 + 9 + … + 30
+sum = 0
+start = 3
+end = 30
+while start <= end:
+    sum += start
+    start += 3
+print("The sum of the series is:", sum)
+
+4.10 WAP to print the product of the series m = 15 * 13 * 11 * 9 * 7
+product = 1
+numbers = [15, 13, 11, 9, 7]
+for num in numbers:
+    product *= num
+print(product)
+
+4.11 WAP to compute factorial of a Number
+num = int(input("Enter a number: "))
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print(factorial)
+
+4.12 WAP to display the Cube of first 10 even numbers
+def compute_cube(n):
+    return n**3
+
+for i in range(1, 11):
+    if i % 2 == 0:
+        cube = compute_cube(i)
+        print("Cube of", i, "is:", cube)
+
+4.13 WAP to compute sum of first n natural numbers
+def compute_sum(n):
+    sum = 0
+    for i in range(1, n+1):
+        sum += i
+    return sum
+n = int(input("Enter the value of n: "))
+sum = compute_sum(n)
+print("Sum of first", n, "natural numbers is:", sum)
+4.14 WAP to display 1 to 10 numbers in reverse order
+for i in range(10, 0, -1):
+    print(i)
+4.15 WAP to create a list of any specific size. Arrange all the
+elements in ascending order. Display list before and after sorting
+n = int(input("Enter the size of the list: "))
+my_list = []
+for i in range(n):
+    num = int(input(f"Enter element {i + 1}: "))
+    my_list.append(num)
+print("List before sorting: ", my_list)
+my_list.sort()
+print("List after sorting: ", my_list)
+
