@@ -1,0 +1,15 @@
+spotify
+sign up login
+shuffle
+playlist
+
+amazon cart
+
+
+//LAB PERFORMANCE 1
+DOM
+STRING
+EVENT HANDLING
+ARRAY-METHOD
+CONDITIONAL STATEMENT
+DATA TYPE
