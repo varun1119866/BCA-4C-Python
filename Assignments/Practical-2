@@ -1,0 +1,29 @@
+Practical 2 – Working with Strings – basic String Operations
+
+2.1 WAP to demonstrate Slicing Operations in Strings
+def string_slicing_operations():
+    string = "Hello, World!"
+        print("Slicing from the start: ", string[:5])
+        print("Slicing from the end: ", string[-5:])
+    print("Slicing from the middle: ", string[3:7])
+    print("Slicing with a step: ", string[::2])
+    print("Reversing the string: ", string[::-1])
+string_slicing_operations()
+
+2.2 WAP to demonstrate built in functions of Strings
+def string_builtin_functions():
+    string = "Hello, World!"
+    print("Upper case: ", string.upper())
+        print("Lower case: ", string.lower())
+    print("Title case: ", string.title())
+        print("Swap case: ", string.swapcase()
+    print("Length of the string: ", len(string))
+        print("Count of 'o': ", string.count('o'))
+        print("Index of 'World': ", string.find('World'))
+    print("Index of 'World': ", string.index('World'))
+    print("Replace 'World' with 'Universe': ", string.replace('World', 'Universe'))
+        print("Split the string: ", string.split(','))
+    list_of_strings = ['Hello', 'World', 'Python']
+    print("Join the list of strings: ", ', '.join(list_of_strings))
+string_builtin_functions()
+
