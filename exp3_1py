@@ -1,0 +1,7 @@
+print("Name: amarneet \nRoll No: 2210997029\n")
+x = int(input("enter a number :"))
+t=int(input("enter the number of terms :"))
+sum = 0.0
+for i in range(t):
+    sum += 1/(x**i)
+    print ("Sum of the series = ",round(sum,3))
