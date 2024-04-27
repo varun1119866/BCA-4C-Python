@@ -1,0 +1,537 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Times New Roman;}{\f1\fnil Times New Roman;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\nowidctlpar\sl240\slmult1\qc\b\f0\fs24 BCA 4 PYTHON PROGRAMMING LAB\par
+PRACTICAL QUESTIONS\par
+
+\pard\sa200\sl276\slmult1\qc\b0\lang9\par
+
+\pard\nowidctlpar\sl240\slmult1\qc\ul\b\lang1033 Practical 1 \ulnone\b0\f1\endash\f0  Simple Introductory Python Programs\par
+\par
+\ul 1.1\tab WAP to Calculate the Area and Perimeter of a Rectangle\ulnone\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\ul\b\lang9 CODE\ulnone\b0  : def calculate_area(length, width):\par
+    return length * width\par
+def calculate_perimeter(length, width):\par
+    return 2 * (length + width)\par
+def main():\par
+    length = float(input("Enter the length of the rectangle: "))\par
+    width = float(input("Enter the width of the rectangle: "))\par
+\par
+    area = calculate_area(length, width)\par
+    perimeter = calculate_perimeter(length, width)\par
+\par
+    print("Area of the rectangle:", area)\par
+    print("Perimeter of the rectangle:", perimeter)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+
+\pard\nowidctlpar\sl240\slmult1\qc\par
+\ul\lang1033 1.2\tab WAP to calculate Avg. marks of 3 subjects\par
+\ulnone\par
+\ul\b CODE\ulnone\b0 : def main():\par
+    subject1 = float(input("Enter marks for subject 1: "))\par
+    subject2 = float(input("Enter marks for subject 2: "))\par
+    subject3 = float(input("Enter marks for subject 3: "))\par
+\par
+    average_marks = (subject1 + subject2 + subject3) / 3\par
+\par
+    print("Average marks:", average_marks)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\par
+\ul 1.3\tab WAP to compute compound Interest\par
+\ulnone\par
+\ul\b CODE\ulnone\b0 : def compound_interest(principal, rate, time):\par
+    A = principal * (pow((1 + rate / 100), time))\par
+    CI = A - principal\par
+    print("Compound interest is", CI)\par
+\par
+compound_interest(10000, 5, 2)\par
+\par
+
+\pard\nowidctlpar\sl-317\slmult0\qc\ul\b Practical\expndtw-2  \expndtw0 2\ulnone\b0\f1\endash\expndtw-2\f0  \expndtw0 Working\expndtw-1  \expndtw0 with\expndtw-2  \expndtw0 Strings \f1\endash\expndtw-3\f0  \expndtw0 basic\expndtw-2  \expndtw0 String\expndtw-3  \expndtw0 Operations\par
+\par
+
+\pard\nowidctlpar\sl240\slmult1\qc\ul 2.1 WAP to\expndtw-4  \expndtw0 demonstrate Slicing\expndtw-2  \expndtw0 Operations\expndtw-4  \expndtw0 in\expndtw-2  \expndtw0 Strings\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    string = "Hello, World!"\par
+\par
+    substring1 = string[7:]\par
+    substring2 = string[:5]\par
+    substring3 = string[7:12]\par
+    substring4 = string[::2]\par
+\par
+    print("Original String:", string)\par
+    print("Substring 1:", substring1)\par
+    print("Substring 2:", substring2)\par
+    print("Substring 3:", substring3)\par
+    print("Substring 4:", substring4)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+2.2\tab WAP\expndtw-2  \expndtw0 to\expndtw-2  \expndtw0 demonstrate\expndtw-3  \expndtw0 built\expndtw-3  \expndtw0 in\expndtw-2  \expndtw0 functions\expndtw1  \expndtw0 of\expndtw-4  \expndtw0 Strings\par
+\par
+\ul\b CODE\ulnone\b0 : def main():\par
+    string = "Hello, World!"\par
+\par
+    length = len(string)\par
+\par
+    lowercase_string = string.lower()\par
+    uppercase_string = string.upper()\par
+\par
+    count_e = string.count('e')\par
+\par
+    index_l = string.find('l')\par
+\par
+    replaced_string = string.replace('World', 'Python')\par
+\par
+    print("Original String:", string)\par
+    print("Length of the String:", length)\par
+    print("Lowercase String:", lowercase_string)\par
+    print("Uppercase String:", uppercase_string)\par
+    print("Occurrences of 'e':", count_e)\par
+    print("Index of 'l':", index_l)\par
+    print("String after replacement:", replaced_string)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+
+\pard\nowidctlpar\sl-317\slmult0\qc\ul\b Practical\expndtw-2  \expndtw0 3\ulnone\b0\f1\endash\expndtw-3\f0  \expndtw0 Conditionals\expndtw-4  \expndtw0 in\expndtw-2  \expndtw0 Python\expndtw2  \expndtw0\f1\endash\expndtw-1\f0  \expndtw0 Decision\expndtw-3  \expndtw0 Control\par
+\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\ul 3.1\tab\expndtw-2  \tab\expndtw0 WAP to\expndtw-3  \expndtw0 check\expndtw-2  \expndtw0 if\expndtw-1  \expndtw0 one\expndtw-2  \expndtw0 No.\expndtw-3  \expndtw0 is\expndtw-1  \expndtw0 divisible\expndtw-1  \expndtw0 by\expndtw-2  \expndtw0 the\expndtw-2  \expndtw0 other\expndtw-1  \expndtw0 or\expndtw4  \expndtw0 not\par
+\par
+\b CODE:\ulnone\b0 def check_divisibility(num1, num2):\par
+    if num2 == 0:\par
+        return False\par
+    if num1 % num2 == 0:\par
+        return True\par
+    else:\par
+        return False\par
+\par
+def main():\par
+    num1 = float(input("Enter the first number: "))\par
+    num2 = float(input("Enter the second number: "))\par
+\par
+    if check_divisibility(num1, num2):\par
+        print(num1, "is divisible by", num2)\par
+    else:\par
+        print(num1, "is not divisible by", num2)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 3.2  WAP\expndtw-1  \expndtw0 to check\expndtw-3  \expndtw0 if\expndtw-1  \expndtw0 a Number\expndtw-2  \expndtw0 is\expndtw-1  \expndtw0 +ve,\expndtw-1  \expndtw0 -ve or zero\par
+\par
+\b CODE\b0 : \ulnone def check_number(num):\par
+    if num > 0:\par
+        return "Positive"\par
+    elif num < 0:\par
+        return "Negative"\par
+    else:\par
+        return "Zero"\par
+\par
+def main():\par
+    num = float(input("Enter a number: "))\par
+    result = check_number(num)\par
+    print("The number is", result)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 3.3\tab WAP\expndtw-1  \expndtw0 to check\expndtw-3  \expndtw0 if\expndtw-1  \expndtw0 a\expndtw2  \expndtw0 given\expndtw-2  \expndtw0 year\expndtw-1  \expndtw0 is\expndtw-1  \expndtw0 Leap\expndtw-2  \expndtw0 or\expndtw-2  \expndtw0 not\par
+\par
+\b CODE\ulnone\b0 : def check_leap_year(year):\par
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\par
+        return True\par
+    else:\par
+        return False\par
+\par
+def main():\par
+    year = int(input("Enter a year: "))\par
+    if check_leap_year(year):\par
+        print(year, "is a leap year.")\par
+    else:\par
+        print(year, "is not a leap year.")\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\ul\par
+
+\pard\nowidctlpar\sb21\sl252\slmult1\qc 3.4\tab WAP\expndtw-1  \expndtw0 to\expndtw-1  \expndtw0 accept\expndtw-2  \expndtw0 basic\expndtw-3  \expndtw0 salary\expndtw-2  \expndtw0 for\expndtw-1  \expndtw0 the\expndtw-2  \expndtw0 employee.\expndtw-3  \expndtw0 Calculate\expndtw-3  \expndtw0 DA\expndtw-2  \expndtw0 as\expndtw-4  \expndtw0 30%\expndtw-56  \expndtw0 of bs, HRA as 20% of bs if bs>=20000else compute DA as 20% and HRA\expndtw1  \expndtw0 as\expndtw-3  \expndtw0 10%.\expndtw1  \expndtw0 Display\expndtw-1  \expndtw0 the\expndtw1  \expndtw0 result.\par
+\par
+\b CODE\b0 : \ulnone def calculate_salary(bs):\par
+    if bs >= 20000:\par
+        da = 0.3 * bs\par
+        hra = 0.2 * bs\par
+    else:\par
+        da = 0.2 * bs\par
+        hra = 0.1 * bs\par
+\par
+    gross_salary = bs + da + hra\par
+    return gross_salary, da, hra\par
+\par
+def main():\par
+    basic_salary = float(input("Enter the basic salary: "))\par
+    gross_salary, da, hra = calculate_salary(basic_salary)\par
+\par
+    print("Basic Salary:", basic_salary)\par
+    print("Dearness Allowance (DA):", da)\par
+    print("House Rent Allowance (HRA):", hra)\par
+    print("Gross Salary:", gross_salary)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+
+\pard\nowidctlpar\sl252\slmult1\qc\ul 3.5\tab WAP to accept sales amount for the salesman. Compute\expndtw1  \expndtw0 commission\expndtw-4  \expndtw0 as\expndtw-2  \expndtw0 20%\expndtw-2  \expndtw0 of\expndtw-1  \expndtw0 sales\expndtw-4  \expndtw0 amount\expndtw-4  \expndtw0 if\expndtw-1  \expndtw0 sales\expndtw-4  \expndtw0 amount>=15000,\expndtw-4  \expndtw0 comm\expndtw-2  \expndtw0 as 15%\expndtw-4  \expndtw0 if\expndtw-1  \expndtw0 sales\expndtw-3  \expndtw0 amount\expndtw-4  \expndtw0 >=1000\expndtw-3  \expndtw0 else\expndtw-3  \expndtw0 comm\expndtw-4  \expndtw0 as\expndtw-1  \expndtw0 10 %.\expndtw-3  \expndtw0 Display\expndtw-1  \expndtw0 the\expndtw-2  \expndtw0 result.\ulnone\par
+\par
+\ul\b CODE\ulnone\b0 : def calculate_commission(sales_amount):\par
+    if sales_amount >= 15000:\par
+        commission = 0.20 * sales_amount\par
+    elif sales_amount >= 1000:\par
+        commission = 0.15 * sales_amount\par
+    else:\par
+        commission = 0.10 * sales_amount\par
+\par
+    return commission\par
+\par
+def main():\par
+    sales_amount = float(input("Enter the sales amount: "))\par
+    commission = calculate_commission(sales_amount)\par
+\par
+    print("Sales Amount:", sales_amount)\par
+    print("Commission:", commission)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+
+\pard\nowidctlpar\sl-317\slmult0\qc\ul\b Practical\expndtw-2  4\expndtw-3  \ulnone\b0\tab\expndtw0\f1\endash\expndtw-2\f0  \expndtw0 While\expndtw-3  \expndtw0 and For\expndtw-3  \expndtw0 loops\expndtw2  \expndtw0\f1\endash\expndtw-3\f0  \expndtw0 Repetition Control\expndtw-3  \expndtw0 Statements\par
+\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\ul 4.1\tab WAP\expndtw-1  \expndtw0 to\expndtw-1  \expndtw0 show\expndtw-2  \expndtw0 working\expndtw-2  \expndtw0 of\expndtw-2  \expndtw0 a\expndtw-2  \expndtw0 while\expndtw2  \expndtw0 Loop\expndtw-1  \expndtw0 with\expndtw-2  \expndtw0 a\expndtw-1  \expndtw0 text\par
+\par
+\b CODE\b0 :  \ulnone def main():\par
+    count = 0\par
+    while count < 5:\par
+        print("This is iteration", count+1)\par
+        count += 1\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+
+\pard\nowidctlpar\sl252\slmult1\qc\ul\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\ulnone 4.2\tab WAP\expndtw-2  \expndtw0 to show\expndtw-2  \expndtw0 working\expndtw-3  \expndtw0 of\expndtw-2  \expndtw0 a\expndtw-1  \expndtw0 while\expndtw-1  \expndtw0 Loop\expndtw-1  \expndtw0 with\expndtw-2  \expndtw0 a\expndtw-2  \expndtw0 Numbers\par
+\par
+\ul\b CODE\ulnone\b0 : def main():\par
+    num = 1\par
+    while num <= 5:\par
+        print(num)\par
+        num += 1\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 4.3\tab\expndtw-2  \expndtw0 WAP\expndtw-2  \expndtw0 to\expndtw-2  \expndtw0 show\expndtw-2  \expndtw0 the\expndtw-2  \expndtw0 working\expndtw-1  \expndtw0 of\expndtw-4  \expndtw0 break\expndtw-4  \expndtw0 and continue\expndtw-3  \expndtw0 statement\ulnone\par
+\par
+\ul\b CODE\ulnone\b0 : def main():\par
+    num = 1\par
+    while num <= 5:\par
+        if num == 3:\par
+            num += 1\par
+            continue\par
+        print(num)\par
+        num += 1\par
+        if num == 5:\par
+            break\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 4.4\tab WAP\expndtw-1  \expndtw0 to the\expndtw-2  \expndtw0 use\expndtw-1  \expndtw0 of\expndtw-3  \expndtw0 else statement\expndtw-3  \expndtw0 with\expndtw-1  \expndtw0 while\expndtw-1  \expndtw0 and\expndtw-2  \expndtw0 break\ulnone\par
+\par
+\ul\b CODE\ulnone\b0 : def main():\par
+    num = 1\par
+    while num <= 5:\par
+        print(num)\par
+        num += 1\par
+    else:\par
+        print("Loop completed successfully!")\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 4.5\tab WAP\expndtw-1  \expndtw0 to compute\expndtw2  \expndtw0 the\expndtw-2  \expndtw0 Sum\expndtw-3  \expndtw0 of\expndtw-3  \expndtw0 the Series\expndtw-2  \expndtw0 4 +\expndtw-2  \expndtw0 8\expndtw-2  \expndtw0 + 12\expndtw-2  \expndtw0 + \'85\expndtw-2  \expndtw0 +\expndtw-2  \expndtw0 40\ulnone\par
+\par
+\ul\b CODE\ulnone\b0 : def main():\par
+    total = 0\par
+    for num in range(4, 41, 4):\par
+        total += num\par
+    print("Sum of the series:", total)\par
+\par
+if __name__ == "__main__":\par
+    main()\ul\par
+\par
+
+\pard\nowidctlpar\sb21\sl252\slmult1\qc 4.6\tab Write\expndtw-3  \expndtw0 a\expndtw-4  \expndtw0 program\expndtw-2  \expndtw0 to\expndtw-4  \expndtw0 display\expndtw-4  \expndtw0 the\expndtw-1  \expndtw0 Fibonacci\expndtw-4  \expndtw0 sequences\expndtw-4  \expndtw0 up\expndtw-3  \expndtw0 to\expndtw-3  \expndtw0 nth\expndtw-55  \expndtw0 term\expndtw-3  \expndtw0 where n\expndtw1  \expndtw0 is\expndtw-1  \expndtw0 provided\expndtw-1  \expndtw0 by\expndtw-1  \expndtw0 the\expndtw-1  \expndtw0 user.\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\par
+\b CODE\b0 : \ulnone def fibonacci(n):\par
+    fib_series = []\par
+    a, b = 0, 1\par
+    while len(fib_series) < n:\par
+        fib_series.append(a)\par
+        a, b = b, a + b\par
+    return fib_series\par
+\par
+def main():\par
+    n = int(input("Enter the number of terms for Fibonacci sequence: "))\par
+    fib_series = fibonacci(n)\par
+    print("Fibonacci sequence up to", n, "terms:", fib_series)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+
+\pard\nowidctlpar\sl-315\slmult0\qc\ul 4.7\tab WAP\expndtw-2  \expndtw0 that\expndtw-2  \expndtw0 prints\expndtw-3  \expndtw0 multiplication\expndtw-4  \expndtw0 table\expndtw-2  \expndtw0 of a\expndtw-3  \expndtw0 umber\expndtw1  \expndtw0 using\expndtw-1  \expndtw0 for\expndtw-3  \expndtw0 loop.\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\par
+\b CODE\b0 : \ulnone def multiplication_table(num):\par
+    for i in range(1, 11):\par
+        print(num, "x", i, "=", num*i)\par
+\par
+def main():\par
+    num = int(input("Enter the number to print its multiplication table: "))\par
+    multiplication_table(num)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 4.8\tab WAP\expndtw-2  \expndtw0 To\expndtw-3  \expndtw0 print\expndtw-2  \expndtw0 a\expndtw-3  \expndtw0 Triangle\expndtw-2  \expndtw0 Pattern\par
+\par
+\b CODE\b0 : \ulnone def print_triangle(rows):\par
+    for i in range(1, rows+1):\par
+        print("*" * i)\par
+\par
+def main():\par
+    rows = int(input("Enter the number of rows for the triangle: "))\par
+    print_triangle(rows)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 4.9\tab WAP\expndtw-1  \expndtw0 to compute\expndtw1  \expndtw0 Sum\expndtw-3  \expndtw0 of the\expndtw-2  \expndtw0 series\expndtw-1  \expndtw0 3\expndtw-3  \expndtw0 + 6 +\expndtw-2  \expndtw0 9\expndtw-3  \expndtw0 +\expndtw-2  \expndtw0\'85 +\expndtw-2  \expndtw0 30\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    total = 0\par
+    for num in range(3, 31, 3):\par
+        total += num\par
+    print("Sum of the series:", total)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+
+\pard\nowidctlpar\sb24\sl240\slmult1\qc\ul 4.10\tab WAP\expndtw-1  \expndtw0 to print\expndtw-3  \expndtw0 the product\expndtw-4  \expndtw0 of the\expndtw-2  \expndtw0 series\expndtw2  \expndtw0 m\expndtw-3  \expndtw0 =\expndtw-3  \expndtw0 15 *\expndtw-2  \expndtw0 13 *\expndtw-2  \expndtw0 11\expndtw-2  \expndtw0 *\expndtw-1  \expndtw0 9\expndtw-2  \expndtw0 *\expndtw2  \expndtw0 7\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    product = 1\par
+    for num in range(15, 6, -2):\par
+        product *= num\par
+    print("Product of the series:", product)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\ul 4.11\tab WAP\expndtw-2  \expndtw0 to compute\expndtw-2  \expndtw0 factorial\expndtw-3  \expndtw0 of\expndtw-2  \expndtw0 a\expndtw-2  \expndtw0 Number\par
+
+\pard\nowidctlpar\sb24\sl240\slmult1\qc\par
+\b CODE\b0 : \ulnone def factorial(n):\par
+    if n == 0:\par
+        return 1\par
+    else:\par
+        return n * factorial(n-1)\par
+\par
+def main():\par
+    num = int(input("Enter a number to compute its factorial: "))\par
+    result = factorial(num)\par
+    print("Factorial of", num, "is:", result)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\ul 4.12\tab WAP\expndtw-2  \expndtw0 to\expndtw-1  \expndtw0 display\expndtw-3  \expndtw0 the\expndtw-3  \expndtw0 Cube\expndtw-1  \expndtw0 of\expndtw-4  \expndtw0 first\expndtw-3  \expndtw0 10\expndtw-3  \expndtw0 even\expndtw-3  \expndtw0 numbers\par
+\par
+\ulnone\b CODE\ul\b0 : \ulnone def main():\par
+    for num in range(2, 21, 2):\par
+        cube = num ** 3\par
+        print("Cube of", num, "is:", cube)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 4.13\tab WAP\expndtw-2  \expndtw0 to\expndtw-1  \expndtw0 compute\expndtw-2  \expndtw0 sum\expndtw-2  \expndtw0 of\expndtw-3  \expndtw0 first\expndtw-3  \expndtw0 n\expndtw-1  \expndtw0 natural\expndtw-3  \expndtw0 numbers\par
+\par
+\b CODE\b0 : \ulnone def sum_of_natural_numbers(n):\par
+    return (n * (n + 1)) // 2\par
+\par
+def main():\par
+    n = int(input("Enter the value of n: "))\par
+    result = sum_of_natural_numbers(n)\par
+    print("Sum of first", n, "natural numbers:", result)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+
+\pard\nowidctlpar\sl240\slmult1\qc\ul 4.1\tab 4   WAP\expndtw-2  \expndtw0 to display\expndtw-3  \expndtw0 1 to\expndtw-4  \expndtw0 10 numbers\expndtw-2  \expndtw0 in\expndtw-2  \expndtw0 reverse\expndtw-2  \expndtw0 order\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    for num in range(10, 0, -1):\par
+        print(num)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 4.15 \tab WAP\expndtw-1  \expndtw0 to\expndtw-3  \expndtw0 create\expndtw-1  \expndtw0 a\expndtw-2  \expndtw0 list\expndtw-4  \expndtw0 of any\expndtw-1  \expndtw0 specific\expndtw-2  \expndtw0 size.\expndtw-4  \expndtw0 Arrange\expndtw-2  \expndtw0 all\expndtw-2  \expndtw0 the     elements\expndtw-6  \expndtw0 in\expndtw-4  \expndtw0 ascending\expndtw-2  \expndtw0 order.\expndtw-2  \expndtw0 Display\expndtw-4  \expndtw0 list\expndtw-6  \expndtw0 before\expndtw-3  \expndtw0 and\expndtw-4  \expndtw0 after\expndtw-4  \expndtw0 sorting\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    size = int(input("Enter the size of the list: "))\par
+    my_list = []\par
+    for i in range(size):\par
+        element = int(input("Enter element " + str(i+1) + ": "))\par
+        my_list.append(element)\par
+\par
+    print("List before sorting:", my_list)\par
+    my_list.sort()\par
+    print("List after sorting:", my_list)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\par
+
+\pard\nowidctlpar\sl-317\slmult0\qc\b Practical\expndtw-1  \expndtw0 5\tab\b0 Working with Lists\expndtw-2  \expndtw0 in\expndtw-2  \expndtw0 Python\par
+\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\ul 5.1\tab WAP to\expndtw-1  \expndtw0 show\expndtw-3  \expndtw0 the creation\expndtw-2  \expndtw0 and\expndtw-2  \expndtw0 working\expndtw-2  \expndtw0 of\expndtw-2  \expndtw0 lists\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    my_list = [1, 2, 3, 4, 5]\par
+    print("Original list:", my_list)\par
+    my_list.append(6)\par
+    print("After appending 6:", my_list)\par
+    my_list.remove(3)\par
+    print("After removing 3:", my_list)\par
+    print("First element:", my_list[0])\par
+    print("Last element:", my_list[-1])\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 5.2\tab WAP\expndtw-1  \expndtw0 to\expndtw-1  \expndtw0 print\expndtw-3  \expndtw0 elements\expndtw-1  \expndtw0 of\expndtw-2  \expndtw0 a\expndtw-2  \expndtw0 list[\lquote q\rquote ,\rquote w\rquote ,\rquote e\rquote ,\rquote r\rquote ,\rquote t\rquote ,\rquote y\rquote ]\expndtw-3  \expndtw0 in\expndtw2  \expndtw0 3eparate\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    my_list = ['q', 'w', 'e', 'r', 't', 'y']\par
+    for i, item in enumerate(my_list):\par
+        print("Index (Positive):", i, ", Index (Negative):", i - len(my_list), ", Element:", item)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 5.3\tab WAP\expndtw-2  \expndtw0 to demonstrate\expndtw-3  \expndtw0 the\expndtw-2  \expndtw0 working\expndtw-3  \expndtw0 of\expndtw-1  \expndtw0 methods\expndtw-3  \expndtw0 used with\expndtw-1  \expndtw0 lists\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    my_list = [3, 1, 4, 1, 5, 9, 2, 6]\par
+    print("Original list:", my_list)\par
+    my_list.sort()\par
+    print("Sorted list:", my_list)\par
+    my_list.reverse()\par
+    print("Reversed list:", my_list)\par
+    index = my_list.index(5)\par
+    print("Index of 5:", index)\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 5.4\tab WAP to create a 3*3 Matrix and how to extract individual\expndtw-56  \expndtw0 elements\expndtw-4  \expndtw0 of\expndtw1       \expndtw0 the\expndtw1  matrix\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    matrix = [[1, 2, 3],\par
+              [4, 5, 6],\par
+              [7, 8, 9]]\par
+    print("Original Matrix:")\par
+    for row in matrix:\par
+        print(row)\par
+    print("Element at (2, 2):", matrix[1][1])\par
+    print("Element at (3, 1):", matrix[2][0])\par
+\par
+if __name__ == "__main__":\par
+    main()\expndtw0\par
+\ul\par
+\par
+
+\pard\nowidctlpar\sl-315\slmult0\qc  5.5\tab WAP\expndtw-2  \expndtw0 to demonstrate\expndtw-3  \expndtw0 built-in\expndtw-2  \expndtw0 functions\expndtw-4  \expndtw0 in\expndtw-2  \expndtw0 Lists\par
+\par
+\b CODE\b0 : \ulnone def main():\par
+    my_list = [1, 2, 3, 4, 5]\par
+    print("Original list:", my_list)\par
+    print("Length of the list:", len(my_list))\par
+    print("Sum of the list:", sum(my_list))\par
+    print("Maximum element in the list:", max(my_list))\par
+    print("Minimum element in the list:", min(my_list))\par
+\par
+if __name__ == "__main__":\par
+    main()\par
+\par
+\ul 5.6\tab WAP\expndtw-2  \expndtw0 to\expndtw-1  \expndtw0 calculate\expndtw-3  \expndtw0 the\expndtw-3  \expndtw0 mean,\expndtw-3  \expndtw0 variance\expndtw-3  \expndtw0 and\expndtw-3  \expndtw0 std.\expndtw-2  \expndtw0 deviation\expndtw-3  \expndtw0 of\expndtw-1  \expndtw0 given\expndtw-56  \expndtw0 list\expndtw-3  \expndtw0 of\expndtw1  \expndtw0 numbers\par
+\par
+\b CODE\b0 : \ulnone import statistics\par
+\par
+def main():\par
+    numbers = [2, 4, 6, 8, 10]\par
+    print("List of numbers:", numbers)\par
+    mean = statistics.mean(numbers)\par
+    print("Mean:", mean)\par
+    variance = statistics.variance(numbers)\par
+    print("Variance:", variance)\par
+    std_dev = statistics.stdev(numbers)\par
+    print("Standard deviation:", std_dev)\par
+\par
+if __name__ == "__main__":\par
+    main()\ul\par
+\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\par
+\par
+\par
+
+\pard\nowidctlpar\sb24\sl240\slmult1\qc\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\par
+\par
+\par
+\ulnone\par
+
+\pard\nowidctlpar\sb21\sl252\slmult1\qc\par
+
+\pard\nowidctlpar\sb21\sl240\slmult1\qc\ul\par
+
+\pard\nowidctlpar\sl240\slmult1\qc\ulnone\par
+\par
+\ul\par
+
+\pard\sa200\sl276\slmult1\qc\ulnone\lang9\par
+}
+ 
