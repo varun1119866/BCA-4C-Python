@@ -1,0 +1,22 @@
+Practical 2 – Working with Strings – basic String Operations
+
+2.1 WAP to demonstrate Slicing Operations in Strings
+
+text = "Hello, World!"
+print("Original string:", text)
+print("Sliced from index 0 to 5:", text[0:5])
+print("Sliced from start to index 5:", text[1:5:2])
+print("Sliced from index -6 to -1:", text[-6:-1])
+
+
+2.2 WAP to demonstrate built in functions of Strings
+string="my name is palak"
+print("Original String:", string)
+print("Capitalized:", string.capitalize())
+print("Uppercase:", string.upper())
+print("Lowercase:", string.lower())
+print("Title Case:", string.title())
+print(f"Count of '{n}':", string.count(n))
+print(f"Index of '{is}':", string.find(is))
+    
+
