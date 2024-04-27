@@ -1,0 +1,71 @@
+Practical 3 – Conditionals in Python – Decision Control
+
+3.1 WAP to check if one No. is divisible by the other or not
+def divisible(m, n):
+   
+    return True if m % n == 0 else False
+
+
+print(divisible(20, 5))  
+print(divisible(7, 2))  
+
+3.2 WAP to check if a Number is +ve, -ve or zero
+def check_number(num):
+    if num > 0:
+        print("The number is positive")
+    elif num < 0:
+        print("The number is negative")
+    else:
+        print("The number is zero")
+num = int(input("Enter a number: "))
+check_number(num)
+
+3.3 WAP to check if a given year is Leap or not
+def check_number(num):
+    if num > 0:
+        print("The number is positive")
+    elif num < 0:
+        print("The number is negative")
+    else:
+        print("The number is zero")
+num = int(input("Enter a number: "))
+check_number(num)
+
+3.4 WAP to accept basic salary for the employee. Calculate DA as
+30% of bs, HRA as 20% of bs if bs&gt;=20000else compute DA as
+20% and HRA as 10%. Display the result.
+
+def calculate_salary(bs):
+    if bs >= 20000:
+        da = bs * 0.3
+        hra = bs * 0.2
+    else:
+        da = bs * 0.2
+        hra = bs * 0.1
+    total_salary = bs + da + hra
+    print(f"Basic salary: {bs}")
+    print(f"DA: {da}")
+    print(f"HRA: {hra}")
+    print(f"Total salary: {total_salary}")
+
+bs = float(input("Enter the basic salary: "))
+
+calculate_salary(bs)
+
+3.5 WAP to accept sales amount for the salesman. Compute
+commission as 20% of sales amount if sales amount&gt;=15000,
+comm as 15% if sales amount &gt;=1000 else comm as 10 %.
+Display the result.
+
+def calculate_commission(sales_amount):
+    if sales_amount >= 15000:
+        comm = sales_amount * 0.2
+    elif sales_amount >= 1000:
+        comm = sales_amount * 0.15
+    else:
+        comm = sales_amount * 0.1
+    print(f"Commission: {comm}")
+
+sales_amount = float(input("Enter the sales amount: "))
+calculate_commission(sales_amount)
+
