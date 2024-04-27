@@ -1,0 +1,100 @@
+Practical 5 Working with Lists in Python
+
+5.1 WAP to show the creation and working of lists
+
+
+my_list = [1, 2, 3, 4, 5]
+print(my_list[0])
+print(my_list[-1])
+my_list[0] = 10
+print(my_list)
+my_list.append(6)
+print(my_list)
+my_list.remove(2)
+print(my_list)
+print(5 in my_list)  
+print(len(my_list))
+my_list.sort()
+my_list.reverse()
+print(my_list)
+
+
+5.2 WAP to print elements of a list[‘q’,’w’,’e’,’r’,’t’,’y’] in 3eparate
+lines along with element’s both indexes (Positive and Negative).
+
+for i, element in enumerate(my_list):
+    print(f"Element: {element}, Positive Index: {i}")
+    print(f"Element: {element}, Negative Index: {-len(my_list) + i}")
+    print()
+
+
+
+5.3 WAP to demonstrate the working of methods used with lists
+my_list = [1, 2, 3, 4, 5]
+my_list.append(6)
+print(my_list)
+my_list.insert(2, 2.5)
+print(my_list)
+my_list.remove(2)
+print(my_list)
+del my_list[1]
+print(my_list)
+print(my_list.index(4))
+print(5 in my_list)
+my_list.reverse()
+print(my_list)
+my_list.sort()
+print(my_list) 
+print(len(my_list))
+new_list = my_list.copy()
+print(new_list)
+my_list.clear()
+print(my_list)
+
+
+
+
+5.4 WAP to create a 3*3 Matrix and how to extract individual elements of the Matrix
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print(matrix[0][0])  
+print(matrix[1][1])  
+print(matrix[2][2])  
+print(matrix[1])  
+column = [row[1] for row in matrix]
+print(column)  
+diagonal = [matrix[i][i] for i in range(len(matrix))]
+print(diagonal)  
+
+5.5 WAP to demonstrate built-in functions in Lists
+my_list = [1, 2, 3, 4, 5]
+print(len(my_list))
+print(max(my_list))
+print(min(my_list))
+print(sum(my_list))
+sorted_list = sorted(my_list)
+print(sorted_list)
+reversed_list = list(reversed(my_list))
+print(reversed_list)
+print(any(my_list))
+my_list = [1, 2, 3, 4, 0]
+print(all(my_list))
+for i, element in enumerate(my_list):
+    print(f"Index: {i}, Element: {element}")
+
+
+
+5.6 WAP to calculate the mean, variance and std. deviation of given list of
+Numbers
+
+def calculate_stats(numbers):
+    mean = sum(numbers) / len(numbers)
+    variance = sum((x - mean) ** 2 for x in numbers) / len(numbers)
+    std_deviation = variance ** 0.5
+    return {'mean': mean, 'variance': variance, 'std_deviation': std_deviation}
+
+numbers = [1, 2, 3, 4, 5]
+stats = calculate_stats(numbers)
+print(stats)
+
+
