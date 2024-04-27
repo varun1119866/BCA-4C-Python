@@ -1,0 +1,266 @@
+Practical 4 – While and For loops – Repetition Control Statements
+
+def display_text(text, repetitions):
+    count = 0
+    while count < repetitions:
+        print(text)
+        count += 1
+
+# Text to display
+text_to_display = "Hello, world!"
+
+# Number of repetitions
+repetitions = 5
+
+# Display text using a while loop
+display_text(text_to_display, repetitions)
+
+
+
+
+4.2 WAP to show working of a while Loop with a Numbers
+def display_numbers(start, end):
+    number = start
+    while number <= end:
+        print(number)
+        number += 1
+
+# Start and end numbers
+start_number = int(input("Enter the start number: "))
+end_number = int(input("Enter the end number: "))
+
+# Display numbers using a while loop
+print("Numbers from", start_number, "to", end_number, "are:")
+display_numbers(start_number, end_number)
+
+
+
+
+4.3 WAP to show the working of break and continue statement
+# Example of break statement
+print("Example of break statement:")
+for i in range(1, 11):
+    if i == 6:
+        break  # exit the loop when i equals 6
+    print(i, end=' ')
+print("\n")
+
+# Example of continue statement
+print("Example of continue statement:")
+for i in range(1, 11):
+    if i == 6:
+        continue  # skip the current iteration when i equals 6
+    print(i, end=' ')
+
+
+
+
+4.4 WAP to the use of else statement with while and break
+# Example of else statement with while loop and break
+num = 0
+while num < 5:
+    print(num, "is less than 5")
+    num += 1
+else:
+    print("Loop ended because num is now equal to or greater than 5")
+
+
+
+
+4.5 WAP to compute the Sum of the Series 4 + 8 + 12 + … + 40
+# Initialize variables
+sum_of_series = 0
+start = 4
+end = 40
+step = 4
+
+# Loop to compute the sum of the series
+for num in range(start, end+1, step):
+    sum_of_series += num
+
+# Display the sum of the series
+print("Sum of the series:", sum_of_series)
+
+
+
+
+4.6 Write a program to display the Fibonacci sequences up to nth term where n is provided by the user.
+def fibonacci_sequence(n):
+    fib_sequence = []
+    if n <= 0:
+        print("Please enter a positive integer.")
+    elif n == 1:
+        fib_sequence = [0]
+    elif n == 2:
+        fib_sequence = [0, 1]
+    else:
+        fib_sequence = [0, 1]
+        for i in range(2, n):
+            fib_sequence.append(fib_sequence[-1] + fib_sequence[-2])
+    return fib_sequence
+
+# Input number of terms
+n = int(input("Enter the number of terms in the Fibonacci sequence: "))
+
+# Display Fibonacci sequence
+fib_sequence = fibonacci_sequence(n)
+print("Fibonacci sequence up to the", n, "term:")
+print(fib_sequence)
+
+
+
+
+4.7 WAP that prints multiplication table of a umber using for loop.
+def multiplication_table(number):
+    print(f"Multiplication Table of {number}:")
+    for i in range(1, 11):
+        print(f"{number} x {i} = {number * i}")
+
+# Input the number for which multiplication table is required
+number = int(input("Enter the number: "))
+
+# Print the multiplication table
+multiplication_table(number)
+
+
+
+
+4.8 WAP To print a Triangle Pattern
+def print_triangle_pattern(rows):
+    for i in range(1, rows + 1):
+        print(" " * (rows - i) + "*" * (2 * i - 1))
+
+# Input the number of rows for the triangle
+rows = int(input("Enter the number of rows for the triangle pattern: "))
+
+# Print the triangle pattern
+print_triangle_pattern(rows)
+
+
+
+
+4.9 WAP to compute Sum of the series 3 + 6 + 9 + … + 30
+# Initialize variables
+sum_of_series = 0
+start = 3
+end = 30
+step = 3
+
+# Loop to compute the sum of the series
+for num in range(start, end + 1, step):
+    sum_of_series += num
+
+# Display the sum of the series
+print("Sum of the series:", sum_of_series)
+
+
+
+
+4.10 WAP to print the product of the series m = 15 * 13 * 11 * 9 * 7
+# Initialize the product
+product = 15 * 13 * 11 * 9 * 7
+
+# Print the product
+print("Product of the series:", product)
+
+
+
+
+4.11 WAP to compute factorial of a Number
+def factorial(n):
+    if n < 0:
+        return "Factorial is not defined for negative numbers."
+    elif n == 0 or n == 1:
+        return 1
+    else:
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+
+# Input the number
+num = int(input("Enter a number: "))
+
+# Compute factorial
+fact = factorial(num)
+
+# Display the factorial
+print("Factorial of", num, "is:", fact)
+
+
+
+
+4.12 WAP to display the Cube of first 10 even numbers
+def cube_of_even_numbers(count):
+    cubes = []
+    num = 2  # Start with the first even number
+    while len(cubes) < count:
+        cubes.append(num ** 3)
+        num += 2  # Move to the next even number
+    return cubes
+
+# Number of even numbers to display
+count = 10
+
+# Display the cube of the first 10 even numbers
+cubes = cube_of_even_numbers(count)
+print("Cube of the first 10 even numbers:")
+for i, cube in enumerate(cubes, start=1):
+    print(f"Cube of {2*i}: {cube}")
+
+
+
+
+4.13 WAP to compute sum of first n natural numbers
+def sum_of_natural_numbers(n):
+    if n <= 0:
+        return "Please enter a positive integer."
+    else:
+        return (n * (n + 1)) // 2
+
+# Input the value of n
+n = int(input("Enter a positive integer (n): "))
+
+# Compute the sum of the first n natural numbers
+sum_natural_numbers = sum_of_natural_numbers(n)
+
+# Display the result
+print(f"The sum of the first {n} natural numbers is: {sum_natural_numbers}")
+
+
+
+
+4.14 WAP to display 1 to 10 numbers in reverse order
+# Display numbers from 10 to 1 in reverse order
+print("Numbers from 10 to 1 in reverse order:")
+for i in range(10, 0, -1):
+    print(i)
+
+
+
+
+4.15 WAP to create a list of any specific size. Arrange all the elements in ascending order. Display list before and after sorting
+def sort_list_asc(input_list):
+    sorted_list = sorted(input_list)
+    return sorted_list
+
+# Input the size of the list
+size = int(input("Enter the size of the list: "))
+
+# Input elements of the list
+input_list = []
+print("Enter the elements of the list:")
+for i in range(size):
+    element = int(input(f"Enter element {i+1}: "))
+    input_list.append(element)
+
+# Display the original list
+print("\nOriginal list:", input_list)
+
+# Sort the list in ascending order
+sorted_list = sort_list_asc(input_list)
+
+# Display the sorted list
+print("List after sorting in ascending order:", sorted_list)
+
+
