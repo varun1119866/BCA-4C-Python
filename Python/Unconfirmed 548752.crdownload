@@ -1,0 +1,17 @@
+def calculate_average_mark(subject1, subject2, subject3):
+   
+    total_marks = subject1 + subject2 + subject3
+    average_marks = total_marks / 3
+    return average_marks
+
+def main():
+    subject1 = float(input("Enter marks of subject 1: "))
+    subject2 = float(input("Enter marks of subject 2: "))
+    subject3 = float(input("Enter marks of subject 3: "))
+
+    average = calculate_average_mark(subject1, subject2, subject3)
+
+    print("Average marks of the three subjects:", average)
+
+if __name__ == "__main__":
+    main()
